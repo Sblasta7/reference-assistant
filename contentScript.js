@@ -92,7 +92,7 @@ const apiKey = 'AIzaSyA7deRSchkD9mFP6IPrn_IfmBT5dalHC3E';
 
     // If the date key doesn't exist, create an empty array for it
       if (!referencesByDate[currDate]) {
-        referencesByDate[currDate] = [];
+        referencesByDate[currDate] = []; 
       }
 
     // Add the sentence to the array for the current date
