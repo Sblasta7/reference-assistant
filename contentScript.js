@@ -96,7 +96,7 @@ const apiKey = 'AIzaSyA7deRSchkD9mFP6IPrn_IfmBT5dalHC3E';
       }
 
     // Add the sentence to the array for the current date
-      referencesByDate[currDate].push(reference);
+      referencesByDate[currDate].push(reference); 
 
     // Store the updated data back to chrome.storage
       chrome.storage.local.set({ references: referencesByDate }, () => {
