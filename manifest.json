@@ -1,0 +1,40 @@
+{
+    "name": "auto-referencer",
+    "version": "1.0",
+    "description": "Referencing made easier",
+    "permissions": ["storage", "tabs", "activeTab"],
+    "background": {
+      "service_worker": "background.js"
+    },  
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["contentScript.js"]
+      }
+    ],
+    "externally_connectable": {
+      "matches": ["<all_urls>"]
+    },
+    "web_accessible_resources": [
+        {
+          "resources": [
+            "assets/bookmark.png",
+            "assets/play.png",
+            "assets/delete.png",
+            "assets/save.png"
+          ],
+          "matches": ["<all_urls>"]
+        }
+      ],      
+    "action": {
+      "default_icon": {
+        "16": "assets/ext-icon.png",
+        "24": "assets/ext-icon.png",
+        "32": "assets/ext-icon.png"
+      },
+      "default_title": "auto-referencer",
+      "default_popup": "popup.html"
+    },
+    "manifest_version": 3
+  }
+  
